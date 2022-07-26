@@ -2,4 +2,128 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.hero__section{
+    background: url(images/heroSectionBackground.png);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    min-height: 69vh;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 48px;
+    height: 80px;
+    font-size: 25px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar__menu_container{
+    display: flex;
+    gap: 30px;
+}
+
+.user_icon{
+    height: 38px;
+    width: 38px;
+    border-radius: 100%;
+    border: solid 1px white;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.hero__section_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(69vh - 80px);
+    gap: 32px;
+}
+
+.hero__section_logo{
+    width: 320px;
+    height: auto;
+}
+
+.hero__section_title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.hero__section_input_container{
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.input_container_location,
+.input_container_search{
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.input_container_search{
+    width: 70%;
+}
+
+.input_container_location{
+    width: 30%;
+    border-right: 2px solid rgba(29, 25, 25, 0.432);
+}
+
+@media only screen and (max-width: 600px){
+    .navbar__menu_container .link{
+        display: none;
+    }
+
+    .user_icon{
+        display: flex;
+    }
+
+    .navbar{
+        padding: 16px;
+    }
+
+    .hero__section{
+        min-height: 80vh;
+    }
+
+    .hero__section_input_container{
+        flex-direction: column;
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .input_container_location,
+    .input_container_search{
+        padding: 15px;
+        border-radius: 10px;
+        width: 90%;
+    }
+
+    .hero__section_container{
+        height: calc(80vh - 60px);
+    }
+
+    .input_container_location{
+        border-right: none;
+    }
 }
